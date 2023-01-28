@@ -57,6 +57,58 @@
     margin: auto;    
     display: block;
   }
+
+  .card-price {
+	display: inline-block;
+  
+  width: auto;
+	height: 38px;
+	
+	background-color: #72dd22;
+	-webkit-border-radius: 3px 6px 6px 3px;
+	-moz-border-radius: 3px 6px 6px 3px;
+	border-radius: 3px 6px 6px 3px;
+	
+	border-left: 1px solid #6ab070;
+
+	/* This makes room for the triangle */
+	margin-left: 19px;
+	
+	position: relative;
+	
+	color: white;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 38px;
+
+	padding: 0px 14px 0px 14px;
+}
+
+/* Makes the triangle */
+.card-price:before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: -19px;
+	width: 0;
+	height: 0;
+	border-top: 19px solid transparent;
+	border-bottom: 19px solid transparent;
+	border-right: 19px solid #6ab070;
+}
+
+/* Makes the circle */
+.card-price:after {
+	content: "";
+	background-color: white;
+	border-radius: 50%;
+	width: 4px;
+	height: 4px;
+	display: block;
+	position: absolute;
+	left: -9px;
+	top: 17px;
+}
   </style>
 </head>
 <body>
@@ -84,7 +136,7 @@
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
   <h1 class="margin" style="font-size:2.5em">Drivers will slow down!</h3>
-  <img src="./singlevest.jpg" class="img-responsive margin" style="display:inline" alt="Vest" width="400">
+  <img src="./singlevest.jpg" class="img-responsive margin" style="display:inline" alt="Vest" width="300">
 </div>
 
 <!-- Second Container -->
@@ -103,20 +155,22 @@
   <a href="mailto:25mphvest@gmail.com?subject=I'd like to buy 25mph vests!" class="btn btn-warning btn-lg">
     <span class="glyphicon glyphicon-shopping-cart"></span> Buy 
   </a>
-  <h4 class="margin">Email to purchase the 25mph vests directly from us</h4>
+  <h4 class="margin">Email to purchase a 25mph vest directly from us.</h4> 
   
 
   <div class="row">
-    <div class="col-sm-6">
-      
-      <img src="pic1.jpg" class="img-responsive margin rounded small-img" style="width:70%" alt="friends wearing 25mph vests">
-      <p class="margin">Walking in the Neighborhood.</p>
-    </div>
     <div class="col-sm-6"> 
+      <p class="card-price">$19.99* for 1</p>
       <img src="pic2.jpg" class="img-responsive margin rounded small-img" style="width:70%" alt="Kids wearing 25mph vests">
       <p class="margin">Kids going to School.</p>
     </div>
-
+    <div class="col-sm-6">
+      <p class="card-price">$38.99* for 2</p>
+      <img src="pic1.jpg" class="img-responsive margin rounded small-img" style="width:70%" alt="friends wearing 25mph vests">
+      <p class="margin">Walking in the Neighborhood.</p>
+    </div>
+  
+    <p>* Free shipping within continental United States</p>
 
     <div class="margin">
       <h2>You will get the driver's attention with this neon green safety vest! 
